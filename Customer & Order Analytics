@@ -58,3 +58,14 @@ AND length(orderid) = 6
 AND orderid <> 'Order ID'
 ;
 
+#8. Retrieve employee IDs (employee_ID)) that: 1. Start with ‘14’ 2. Have a single character after ‘14’ 3. End with ‘9’
+SELECT employee_ID
+FROM employees
+WHERE employee_ID LIKE '14_9'
+;
+
+#9. Find all orderIDs in the MarSales table from the BIT_DB database where the orderID has the characters ‘16’ in the beginning, followed by one unknown character, then a ‘0’, and any number of characters for the rest.
+SELECT orderID
+FROM BIT_DB.MarSales
+WHERE orderID LIKE '16_0%'
+;
